@@ -67,7 +67,6 @@ Item.find({}, function(err, foundItems){
 });
 });
 
-
 app.get("/:customListName", function(req, res){
   const customListName = _.capitalize(req.params.customListName);
 
@@ -159,12 +158,6 @@ app.get("/about",function(req, res){
 
 
 
-
-let port = process.env.PORT;
-if(port == null || port = ""){
-  port = 3000;
-}
-
-app.listen(port,function(){
+app.listen(process.env.PORT || 3000 ,function(){
   console.log("The server has started Successfully);
 });
