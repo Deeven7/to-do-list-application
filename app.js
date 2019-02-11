@@ -65,19 +65,8 @@ Item.find({}, function(err, foundItems){
   }
 
 });
-
-var today = new Date();
-
-var options = {
-    weekday: "long",
-    day: "numeric",
-    month: "long"
-};
-
-var day = today.toLocaleDateString("en-US", options);
-
-
 });
+
 
 app.get("/:customListName", function(req, res){
   const customListName = _.capitalize(req.params.customListName);
